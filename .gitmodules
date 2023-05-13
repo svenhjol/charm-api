@@ -1,0 +1,4 @@
+[submodule "common"]
+	path = common
+	url = git@github.com:svenhjol/charm-api-test
+	branch = origin/common-1.20
