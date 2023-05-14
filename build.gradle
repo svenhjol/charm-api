@@ -25,6 +25,10 @@ sourceSets {
     }
 }
 
+loom {
+    accessWidenerPath = file("src/main/resources/${props.mod_id}.accesswidener")
+}
+
 dependencies {
     minecraft "com.mojang:minecraft:${props.minecraft_version}"
     modImplementation "net.fabricmc:fabric-loader:${props.loader_version}"

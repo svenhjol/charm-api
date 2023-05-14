@@ -12,6 +12,8 @@
   "license": "MIT",
   "environment": "*",
 
+  "accessWidener": "charm_api.accesswidener",
+
   "depends": {
     "fabricloader": ">=0.14.17",
     "minecraft": "*",
