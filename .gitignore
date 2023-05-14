@@ -1,11 +1,6 @@
 .DS_Store
-<<<<<<< HEAD
-.gradle
-.idea
+.gradle/
+.idea/
 /build/
 /common
 /run/
-=======
-.gradle/
-.idea/
->>>>>>> main
