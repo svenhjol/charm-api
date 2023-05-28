@@ -1,6 +1,6 @@
 package svenhjol.charm_api.event;
 
-import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.world.item.ItemStack;
 
@@ -12,14 +12,14 @@ public class TooltipRenderEvent extends CharmEvent<TooltipRenderEvent.Handler> {
 
     private TooltipRenderEvent() {}
 
-    public void invoke(PoseStack poseStack, List<ClientTooltipComponent> lines, int x, int y, @Nullable ItemStack stack) {
+    public void invoke(GuiGraphics guiGraphics, List<ClientTooltipComponent> lines, int x, int y, @Nullable ItemStack stack) {
         for (Handler handler : getHandlers()) {
-            handler.run(poseStack, lines, x, y, stack);
+            handler.run(guiGraphics, lines, x, y, stack);
         }
     }
 
     @FunctionalInterface
     public interface Handler {
-        void run(PoseStack poseStack, List<ClientTooltipComponent> lines, int x, int y, @Nullable ItemStack stack);
+        void run(GuiGraphics guiGraphics, List<ClientTooltipComponent> lines, int x, int y, @Nullable ItemStack stack);
     }
 }
