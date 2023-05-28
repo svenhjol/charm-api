@@ -1,6 +1,6 @@
 package svenhjol.charm_api.event;
 
-import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.gui.GuiGraphics;
 
 public class HudRenderEvent extends CharmEvent<HudRenderEvent.Handler> {
     public static final HudRenderEvent INSTANCE = new HudRenderEvent();
@@ -9,6 +9,6 @@ public class HudRenderEvent extends CharmEvent<HudRenderEvent.Handler> {
 
     @FunctionalInterface
     public interface Handler {
-        void run(PoseStack poseStack, float tickDelta);
+        void run(GuiGraphics guiGraphics, float tickDelta);
     }
 }
