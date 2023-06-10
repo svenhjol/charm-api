@@ -39,7 +39,7 @@ public class GrindstoneEvents {
 
     private static void putSidedInstance(Player player, GrindstoneMenuInstance instance) {
         UUID uuid = player.getUUID();
-        if (player.level.isClientSide) {
+        if (player.level().isClientSide) {
             CLIENT_INSTANCES.put(uuid, instance);
         } else {
             SERVER_INSTANCES.put(uuid, instance);
@@ -50,7 +50,7 @@ public class GrindstoneEvents {
     private static GrindstoneMenuInstance getSidedInstance(Player player) {
         UUID uuid = player.getUUID();
 
-        if (player.level.isClientSide && CLIENT_INSTANCES.containsKey(uuid)) {
+        if (player.level().isClientSide && CLIENT_INSTANCES.containsKey(uuid)) {
             return CLIENT_INSTANCES.get(uuid);
         } else if (SERVER_INSTANCES.containsKey(uuid)) {
             return SERVER_INSTANCES.get(uuid);
@@ -61,7 +61,7 @@ public class GrindstoneEvents {
 
     private static void removeSidedInstance(Player player) {
         UUID uuid = player.getUUID();
-        if (player.level.isClientSide) {
+        if (player.level().isClientSide) {
             CLIENT_INSTANCES.remove(uuid);
         } else {
             SERVER_INSTANCES.remove(uuid);
