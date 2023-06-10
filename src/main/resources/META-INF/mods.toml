@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[44,)"
+loaderVersion="[46,)"
 license="MIT"
 [[mods]]
 modId="charm_api"
@@ -14,12 +14,12 @@ logoFile="icon.png"
 [[dependencies.charm_api]]
     modId="forge"
     mandatory=true
-    versionRange="[44,)"
+    versionRange="[46,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.charm_api]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.3,1.20)"
+    versionRange="[1.20)"
     ordering="NONE"
     side="BOTH"
